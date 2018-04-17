@@ -23,5 +23,44 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {
+    "paymentBetweenDates": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "fromDate",
+          "type": "string",
+          "required": true,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "toDate",
+          "type": "string",
+          "required": true,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "payments",
+          "type": "array",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "Returns the payments info between given dates",
+      "http": [
+        {
+          "path": "/paymentBetweenDates",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }
