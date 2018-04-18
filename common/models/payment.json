@@ -1,13 +1,13 @@
 {
   "name": "Payment",
-  "plural": "Payments",
+  "plural": "payments",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "pid": {
+    "tz": {
       "type": "number"
     },
     "date": {
@@ -32,7 +32,7 @@
       "isStatic": true,
       "accepts": [
         {
-          "arg": "fromDate",
+          "arg": "p_date_start",
           "type": "string",
           "required": true,
           "description": "",
@@ -41,7 +41,7 @@
           }
         },
         {
-          "arg": "toDate",
+          "arg": "p_date_end",
           "type": "string",
           "required": true,
           "description": "",
@@ -52,7 +52,7 @@
       ],
       "returns": [
         {
-          "arg": "payments",
+          "arg": "payments_list",
           "type": "array",
           "root": true,
           "description": ""
@@ -61,7 +61,7 @@
       "description": "Returns the payments info between given dates",
       "http": [
         {
-          "path": "/paymentBetweenDates",
+          "path": "/search",
           "verb": "get"
         }
       ]
