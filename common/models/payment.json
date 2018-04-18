@@ -7,18 +7,22 @@
     "validateUpsert": true
   },
   "properties": {
-    "id": {
+    "pid": {
       "type": "number"
     },
     "date": {
       "type": "string"
     },
     "auth_code": {
+      "type": "string"
+    },
+    "amount": {
       "type": "number"
     },
-    "payment_code": {
+    "confirmation_code": {
       "type": "number"
     }
+   
   },
   "validations": [],
   "relations": {},
