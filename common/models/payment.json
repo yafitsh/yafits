@@ -14,7 +14,7 @@
       "type": "string"
     },
     "auth_code": {
-      "type": "string"
+      "type": "number"
     },
     "amount": {
       "type": "number"
@@ -22,7 +22,6 @@
     "confirmation_code": {
       "type": "number"
     }
-   
   },
   "validations": [],
   "relations": {},
@@ -34,7 +33,7 @@
         {
           "arg": "p_date_start",
           "type": "string",
-          "required": true,
+          "required": false,
           "description": "",
           "http": {
             "source": "query"
@@ -43,7 +42,25 @@
         {
           "arg": "p_date_end",
           "type": "string",
-          "required": true,
+          "required": false,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "auth_code",
+          "type": "number",
+          "required": false,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "tz",
+          "type": "number",
+          "required": false,
           "description": "",
           "http": {
             "source": "query"
