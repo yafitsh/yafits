@@ -65,6 +65,15 @@
           "http": {
             "source": "query"
           }
+        },
+        {
+          "arg": "office_code",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
         }
       ],
       "returns": [
